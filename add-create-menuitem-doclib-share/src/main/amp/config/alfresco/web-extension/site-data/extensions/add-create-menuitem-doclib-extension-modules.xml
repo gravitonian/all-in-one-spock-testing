@@ -1,0 +1,25 @@
+<extension>
+    <modules>
+        <!-- This module is dependent on the custom content model setup in the repo-amp module -->
+        <module>
+            <id>Add a new menu item to Create... menu in DocLib</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <configurations>
+                <!-- Add the menu item used to create text documents with the acme:document type applied
+                     to the Create... drop down menu -->
+                <config evaluator="string-compare" condition="DocumentLibrary">
+                    <create-content>
+                        <content id="acme-plain-text" label="create.acmedoc.menu.item.label" icon="text" index="1" type="pagelink">
+                            <param name="page">create-content?destination={nodeRef}&amp;itemId=acme:document&amp;mimeType=text/plain</param>
+                        </content>
+                    </create-content>
+                </config>
+
+                <!-- For the Create form configuration for acme:document
+                    see custom-content-model-share/src/main/resources/META-INF/share-config-custom.xml
+                     -->
+            </configurations>
+        </module>
+    </modules>
+</extension>

@@ -1,0 +1,12 @@
+/alf_data_dev
+/org
+.idea/
+.DS_Store
+*.log
+*.log*
+.classpath
+.project
+.settings/
+target/
+*.iml
+
