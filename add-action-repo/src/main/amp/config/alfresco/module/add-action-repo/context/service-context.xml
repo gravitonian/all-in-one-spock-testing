@@ -22,9 +22,8 @@
 	<bean id="send-as-email"
 		  class="org.alfresco.tutorial.repoaction.SendAsEmailActionExecuter"
 		  parent="action-executer">
-		<property name="serviceRegistry">
-			<ref bean="ServiceRegistry" />
-		</property>
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="mailService" ref="mailService" />
 	</bean>
     
 </beans>
